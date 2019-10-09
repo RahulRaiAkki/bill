@@ -15,18 +15,20 @@ export class LoginComponent implements OnInit {
     //   console.log(res);
     // });
 
-    this.httpClient.post(this.baseUrl, {'username':'8199061908','password':'lakshya123'})
-      .subscribe(
-        (val) => {
-          console.log("POST call successful value returned in body",
-            val);
-        },
-        response => {
-          console.log("POST call in error", response);
-        },
-        () => {
-          console.log("The POST observable is now completed.");
-        });
+    // this.httpClient.post(this.baseUrl, {username: 'lakshya.punhani', password: 'lakshya123'})
+    //   .subscribe(
+    //     (val) => {
+    //       console.log('POST call successful value returned in body',
+    //         val);
+    //     },
+    //     response => {
+    //       console.log('POST call in error', response);
+    //     },
+    //     () => {
+    //       console.log('The POST observable is now completed.');
+    //     });
   }
-
+  submit(val) {
+    console.log('val', val);
+  }
 }
